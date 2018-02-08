@@ -13,8 +13,8 @@ const app = express();
 // require('./_routes')(app);   // <-- or whatever you do to include your API endpoints and middleware
 //
 
-const mongoURI = process.env.NODE_ENV === 'test' ? 'mongodb://localhost/okeanos' : 'mongodb://localhost/okeanos';
-mongoose.connect(mongoURI);
+// const mongoURI = process.env.NODE_ENV === 'test' ? 'mongodb://localhost/okeanos' : 'mongodb://localhost/okeanos';
+// mongoose.connect(mongoURI);
 
 app.use(express.static(__dirname +'../dist/')); //serves the index.html
 
