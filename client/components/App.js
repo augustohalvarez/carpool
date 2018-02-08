@@ -20,15 +20,13 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      
+      foo: 'bar'
     }
   }
 
   render() {
     return (
       <div className={styles.app} >
-        <Link to='/login'>Login</Link>
-        <Link to='/register'>Register</Link>
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route path="/login" component={Login} />

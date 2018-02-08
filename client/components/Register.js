@@ -15,37 +15,36 @@ class Register extends Component {
     this.state = {
       foo: 'bar'
     }
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
-    const data = new FormData(event.target);
+  handleTel() {
+    let text = document.getElementById('inputTel').value;
+    console.log(text);
 
-    fetch('/register', {
-      method: 'POST',
-      body: data,
-    });
   }
 
 
   render() {
     return (
-      <form action={this.state.handleSubmit}>
+      <form method='POST' action='/api/register' autoComplete='off'>
 
-        <label for=""></label>
-        <input type="text" name="" id="login-un-input" placeholder="email" className="username" />
+        <input type="text" name="fullName" placeholder="full name" className="fullName" />
 
-        <label for=""></label>
-        <input type="password" name="" id="login-pw-input" placeholder="password" className="pass" />
+        <input type="email" name="email"  placeholder="email" className="email" />
 
-        <label for=""></label>
-        <input type="password" name="" id="login-pw-input" placeholder="confirm password" className="pass" />
+        <input type="password" name="password" placeholder="password" className="pass" />
+
+        <input type="password" name="passwordConf" placeholder="confirm password" className="pass" />
+
+        <input type="text" name="phone" placeholder="phone number" className="phone"
+          id="inputTel" onChange={this.handleTel}
+        />
+        {/*** Only Safari supports type 'tel' at the moment. We'll use text ***/}
 
         <button type="submit">Login</button>
 
         <span id='notRegisteredSpan'>
-          <h4>Have an account? </h4>
+          <h4> Have an account? </h4>
         </span>
 
         <span id='registerLinkSpan'>

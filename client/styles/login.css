@@ -3,7 +3,7 @@
 form {
   position: relative;
   top: 200px;
-  width: 250px;
+  width: 300px;
   margin: 0 auto;
   background: rgba(130,130,130,.3);
   padding: 20px 22px;
@@ -17,7 +17,7 @@ form {
 }
 
 form input, form button {
-  width: 212px;
+  width: 250px;
   border: 1px solid;
   border-bottom-color: rgba(255,255,255,.5);
   border-right-color: rgba(60,60,60,.35);
@@ -43,7 +43,7 @@ form input:focus { background-color: rgba(0,0,0,.4); }
 :-ms-input-placeholder { color: #ccc; text-transform: uppercase; }
 
 form button[type=submit] {
-  width: 248px;
+  width: 288px;
   margin-bottom: 0;
   color: #3f898a;
   letter-spacing: .05em;
@@ -60,5 +60,5 @@ form button[type=submit] {
 
 span {
   display: inline-block;
-  padding-right: 25px;
+  padding-right: 35px;
 }

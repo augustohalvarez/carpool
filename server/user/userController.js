@@ -1,3 +1,5 @@
+/*** userController ***/
+
 const modelImports = require('./userModel');
 let User = modelImports.user;
 let Sesh = modelImports.sesh;

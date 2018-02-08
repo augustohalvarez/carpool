@@ -1,3 +1,5 @@
+/*** sessionController.js ***/
+
 const Session = require('./sessionModel');
 
 const sessionController = {};

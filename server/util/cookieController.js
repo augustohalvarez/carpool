@@ -1,3 +1,4 @@
+/*** cookieController.js ***/
 
 const sessionController = require('./../session/sessionController');
 
