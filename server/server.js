@@ -5,9 +5,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
-
 const app = express();
-
 
 app.use(express.static(__dirname +'../dist/')); //serves the index.html
 
@@ -18,10 +16,18 @@ app.use(express.static(__dirname +'../dist/')); //serves the index.html
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-
 app.post('/api/login', (req, res) => {
   console.log('hi api/login backend');
   console.log('req.body ---> ', req.body);
+});
+
+app.post('/api/register', (req, res) => {
+  console.log('hi api/login backend');
+  console.log('req.body ---> ', req.body);
+});
+
+app.listen(3000, () => {
+  console.log('server listening on port 3000');
 });
 
 module.exports = app;
