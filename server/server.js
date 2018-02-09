@@ -1,9 +1,15 @@
 /*** server.js ***/
 
+// Required Modules
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const db = require('./database.js');
+
+// Middleware
+const userController = require('./user/userController.js');
+
 
 const app = express();
 
